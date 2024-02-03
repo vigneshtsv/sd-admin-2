@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import Sidebar from './components/Sidebar'
 import Dashboard from './components/Dashboard'
 import Class from './components/Class'
-import User from './components/User'
 import Querry from './Querry'
 import {BrowserRouter,Routes, Route, Navigate} from 'react-router-dom'
 import AddUser from "./components/AddUser"
@@ -47,7 +46,6 @@ let [user,setUser] = useState([
         <Route path='/add-user' element={<AddUser user={user} setUser={setUser}/>}/>
         <Route path='/edit-user/:id' element={<EditUser user={user} setUser={setUser}/>}/>
         <Route path='/class' element={<Class/>}/>
-        <Route path='/user' element={<User/>}/>
         <Route path='/querry' element={<Querry/>}/>
         <Route path='*' element={<Navigate to='/dashboard'/>}/>
       </Routes>
