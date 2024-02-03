@@ -4,3 +4,11 @@
 4. npm install react-bootsrap bootstrap
 5. Include the css file in the main.jsx
 6. In dashboard create a table and display the users - render user data using map
+
+
+
+1.Create Context
+2.Share the dat to the provider
+3.Export the context
+4.Get the useContext Hook imported in the destination component
+5.Get the state data in the component using useContext hook

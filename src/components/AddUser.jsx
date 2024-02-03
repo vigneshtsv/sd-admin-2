@@ -1,13 +1,16 @@
-import React,{useState} from 'react'
+import React,{useContext, useState} from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useNavigate } from 'react-router-dom';
+import { UserContext } from '../utils/UserContextComponent';
+function AddUser() {
+  let {user,setUser} = useContext(UserContext)
 
-function AddUser({user,setUser}) {
   let [name,setName] = useState("")
   let [email,setEmail] = useState("")
   let [mobile,setMobile] = useState("")
   let [batch,setBatch] = useState("")
+  
   let navigate = useNavigate()
     const handleCreate = ()=>{
         let id = user.length?user[user.length-1].id+1 : 1 //fetch the last index element.id+1 or if array is empty
