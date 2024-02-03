@@ -14,7 +14,7 @@ function AddUser() {
   let navigate = useNavigate()
     const handleCreate = ()=>{
         let id = user.length?user[user.length-1].id+1 : 1 //fetch the last index element.id+1 or if array is empty
-        let newArray = [...user] // deep copy, achieve inmutability
+        let newArray = [...user] // deep copy, achieve inmutability 
         newArray.push({
           id,
           name,
